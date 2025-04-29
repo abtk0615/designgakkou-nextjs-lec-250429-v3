@@ -1,9 +1,12 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Metadata } from "next";
 import { ACCESS_SECTION, BASE_URL } from "@/constants/site";
 import { createMetadata } from "@/utils/metadata";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
+// GoogleMapWrapperを動的にインポート
+const GoogleMapWrapper = lazy(() => import("./GoogleMapWrapper"));
 
 export const metadata: Metadata = createMetadata({
   title: ACCESS_SECTION.title,
@@ -44,7 +47,7 @@ export default function AccessPage() {
               }
             >
               <div className="h-[400px] w-full">
-                {/* <GoogleMapWrapper /> */}
+                <GoogleMapWrapper />
               </div>
             </Suspense>
           </div>
