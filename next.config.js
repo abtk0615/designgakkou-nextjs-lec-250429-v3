@@ -2,7 +2,7 @@
 // isProd には本番環境の場合 true、それ以外の場合は false が入る
 const isProd = process.env.NODE_ENV === "production";
 
-// ローカルプレビュー用変数 - .env.local で LOCAL_PREVIEW=true にするとbasePath と assetPrefix が適用されなくなる
+// ローカルプレビュー用変数 - .env.local で LOCAL_PREVIEW=true にするとbasePath と assetPrefix が適用されなくなる。
 const isLocalPreview = process.env.LOCAL_PREVIEW === "true";
 
 // 静的生成用の設定
